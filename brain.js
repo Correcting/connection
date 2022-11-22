@@ -14,26 +14,33 @@ msg - это объект вида: {
 }
 module.exports = brain // Единственный наш интерфейс во внешний мир
 
+// Функция отправки
+function send(name, msg) {
+  return global.out.push({n: name, m: msg})
+}
+
+// --------------------
 // Главный роутер
 function main(msg) {
-  let out = global.out // Наши исходящие
-
   if (msg.m.match('Чат лагеря')) {
-    out.push('🏘В Нью-Рино')
+    send('peer', '🏘В Нью-Рино')
     return
   }
 
   if (msg.m.match('уютный город Рино,')) {
-    out.push(
-      '/eat1', '/eat2', '/eat2',
-      '/eq_480', '/eq_472', '/eq_43',
-      '👣Пустошь'
-    )
+    send('peer', '/eat1')
+    send('peer', '/eat2')
+    send('peer', '/eat2')
+    send('peer', '/eq_480')
+    send('peer', '/eq_472')
+    send('peer', '/eq_43')
+    send('peer', '👣Пустошь')
     return
   }
 
   if (msg.m.match('в этот раз уже буквально.')) {
-    out.push('⛺️Вернуться', 'Вернуться в лагерь')
+    send('peer', '⛺️Вернуться')
+    send('peer', 'Вернуться в лагерь')
     return
   }
 
@@ -41,7 +48,7 @@ function main(msg) {
     msg.m.match('Твой путь преградил исполинских размеров монстр.')
     || msg.m.match('в этот раз ты не получил сдачи.')
   ) {
-    out.push('⚔️Атаковать')
+    send('peer', '⚔️Атаковать')
     return
   }
 
@@ -49,12 +56,13 @@ function main(msg) {
     msg.m.match('📯🚷 ❤️')
     || msg.m.match('📯❤️')
   ) {
-    out.push('Двигаться дальше')
+    send('peer', 'Двигаться дальше')
     return
   }
 
   if (msg.m.match('📯🚷 Бэт-пещера')) {
-    out.push('/eq_480', 'Двигаться дальше')
+    send('peer', '/eq_480')
+    send('peer', 'Двигаться дальше')
     return
   }
 
@@ -63,7 +71,7 @@ function main(msg) {
     || msg.m.match('Тебе не уйти от противника')
     || msg.m.match('Во время вылазки на тебя напал')
   ) {
-    out.push('⚔️Дать отпор')
+    send('peer', '⚔️Дать отпор')
     return
   }
 
@@ -77,7 +85,8 @@ function main(msg) {
     if(actPath(parse[1])) return
 
   if (msg.m.match('Ты встретил бродячего торговца,')) {
-    out.push('/buy_5i', '/view')
+    send('peer', '/buy_5i')
+    send('peer', '/view')
     return
   }
 
@@ -88,7 +97,7 @@ function main(msg) {
     || msg.m.match('Рейд в 9:00')
     || msg.m.match('Рейд в 17:00')
   ) {
-    out.push('👣Идти дaльше')
+    send('peer', '👣Идти дaльше')
     return
   }
 
@@ -105,16 +114,16 @@ function main(msg) {
     || msg.m.match('водохранилище\n 🕳+')
     || msg.m.match('датацентр\n 🕳+')
   ) {
-    out.push('/view')
+    send('peer', '/view')
     return
   }
 
   if (msg.m.match('Ты очень голоден.')) {
-    out.push('/myfood')
+    send('peer', '/myfood')
     return
   }
   if (parse = msg.m.match(/\/use_1[0-2]\d/g)) {
-    out.push(parse[0])
+    send('peer', parse[0])
     return
   }
 
@@ -124,7 +133,7 @@ function main(msg) {
     return
   }
   if (parse = msg.m.match(/\/del_\d+/)) {
-    out.push(parse[0])
+    send('peer', parse[0])
     return
   }
 }
@@ -132,56 +141,67 @@ function main(msg) {
 // --------------------
 // Ветка километража
 function actPath(parse, light=true) {
-  let out = global.out // Наши исходящие
   let x = Number(parse)
 
   if (light) {
     switch (x) {
       case 2:
-        out.push('👣Идти дaльше')
+        send('peer', '👣Идти дaльше')
         return true
       case 11:
-        out.push('Старая шахта', 'Двигаться дальше')
+        send('peer', 'Старая шахта')
+        send('peer', 'Двигаться дальше')
         return true
 //      case 22:
-//        out.push('🚷В Темную зону')
+//        send('peer', '🚷В Темную зону')
 //        return true
       case 27:
-        out.push('👣Идти дaльше')
+        send('peer', '👣Идти дaльше')
         return true
       case 40:
-        out.push('/eq_54', '/eq_73', '👣Идти дaльше')
+        send('peer', '/eq_54')
+        send('peer', '/eq_73')
+        send('peer', '👣Идти дaльше')
         return true
       case 45:
-        out.push('🌁Высокий Хротгар', 'Двигаться дальше')
+        send('peer', '🌁Высокий Хротгар')
+        send('peer', 'Двигаться дальше')
         return true
 //      case 50:
-//        out.push('🛑Руины Гексагона', 'Двигаться дальше')
+//        send('peer', '🛑Руины Гексагона')
+//        send('peer', 'Двигаться дальше')
 //        return true
       case 51:
-        out.push('🛏Безопасный привал', '/deeprest')
+        send('peer', '🛏Безопасный привал')
+        send('peer', '/deeprest')
         return true
 //      case 52:
-//        out.push('🚷В Темную зону')
+//        send('peer', '🚷В Темную зону')
 //        return true
       case 68: case 69:
-        out.push('⛺️Вернуться', 'Вернуться в лагерь')
+        send('peer', '⛺️Вернуться')
+        send('peer', 'Вернуться в лагерь')
         return true
       default: return false // Указанный километраж не найден
     }
   } else { // Если темно
     switch (x) {
       case 23:
-        out.push('🚽Сточная труба', 'Двигаться дальше')
+        send('peer', '🚽Сточная труба')
+        send('peer', 'Двигаться дальше')
         return true
       case 34:
-        out.push('🦇Бэт-пещера', 'Двигаться дальше', '/eq_53')
+        send('peer', '🦇Бэт-пещера')
+        send('peer', 'Двигаться дальше')
+        send('peer', '/eq_53')
         return true
       case 56:
-        out.push('🔬Научный комплекс', 'Двигаться дальше')
+        send('peer', '🔬Научный комплекс')
+        send('peer', 'Двигаться дальше')
         return true
 //      case 63:
-//        out.push('/voevat_suda', '/stealth')
+//        send('peer', '/voevat_suda')
+//        send('peer', '/stealth')
 //        return true
       default: return false // Указанный километраж не найден
     }
@@ -191,7 +211,6 @@ function actPath(parse, light=true) {
 // --------------------
 // Ветка очистки
 function actClean(msg) {
-  let out = global.out // Наши исходящие
   const badGoods = [
    'BFGzzv-4000',
     'Боевая броня',
@@ -226,5 +245,5 @@ function actClean(msg) {
     parse = msg.m.match(new RegExp(badGoods[i]+'.*(\\/dl_\\d+)'))
     if (parse) break
   }
-  if (parse) out.push(parse[1])
+  if (parse) send('peer', parse[1])
 }
