@@ -1,11 +1,13 @@
 // Техническая функция: интуиция говорит: "Оставить!" - хрен знает почему
 const brain = function(msg) {
-/*  msg - это объект вида: {
+/*
+msg - это объект вида: {
     t:  new Date(),
     id: up.user_id,
     n:  peerName,
     m:  up.message
-  }*/
+  }
+*/
   main(msg)
   console.log(msg)
   console.log('--------------------')
