@@ -3,9 +3,9 @@ const brain = function(msg) {
 /*
 msg - это объект вида: {
     t:  new Date(),
-    id: up.user_id,
-    n:  peerName,
-    m:  up.message
+    id: ТГ id юзера,
+    n:  наше имя юзера из списка sec.ids,
+    m:  текст сообщения
   }
 */
   main(msg)
