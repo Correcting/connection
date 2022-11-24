@@ -241,7 +241,7 @@ function foundShit(msg) {
   for (let i=0; i<badGoods.length; i++) {
     parse = msg.m.match(new RegExp(badGoods[i]+'.*(\\/dl_\\d+)'))
     if (parse) break
-}
+  }
   send('peer', '/cstock')
 }
 function grabShit(msg) {
