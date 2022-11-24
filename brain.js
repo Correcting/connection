@@ -127,7 +127,7 @@ function main(msg) {
   }
      
   if (msg.m.match('/dl_')) {
-    actClean(msg)
+    grabShit(msg)
     return
   }
   
