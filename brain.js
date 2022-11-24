@@ -145,7 +145,7 @@ function main(msg) {
 function sendStat(msg) {
   let parse
   if (parse = msg.m.match(/👣(\d+)км/))
-  if (parse[1]>60) forward('pveSend' =451=)
+  if (parse[1]>60) forward('pveSend', =451=)
 
 }
 
