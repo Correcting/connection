@@ -142,6 +142,9 @@ function main(msg) {
   }
 }
 
+fonction sendStat(msg) {
+  
+
 // --------------------
 // Ветка километража
 function actPath(parse, light=true) {
