@@ -120,8 +120,10 @@ function main(msg) {
   }
 
   // Ловим очистку
-  if (msg.m.match(/(Получено:)|(Найдено:)/))
+  if (msg.m.match(/(Получено:)|(Найдено:)/)) {
      foundShit(msg)
+     return
+  }
      
   if (msg.m.match('/dl_')) {
     actClean(msg)
