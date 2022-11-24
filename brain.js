@@ -120,9 +120,9 @@ function main(msg) {
     return
   }
   
-    //Ловим мэсседж
+  //Ловим мэсседж
   if (msg.m.match('Сражение с') {
-    sendMsg(msg)
+    sendStat(msg)
   }
 
   // Ловим очистку
