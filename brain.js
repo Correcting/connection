@@ -205,6 +205,7 @@ function actPath(parse, light=true) {
 
 // --------------------
 // Ветка очистки
+
 const badGoods = [
   'BFGzzv-4000',
   'Боевая броня',
@@ -233,6 +234,7 @@ const badGoods = [
   'Кистень',
   'Электромеч'
 ]
+
 function foundShit(msg) {
   send('peer', '/cstock')
 }
