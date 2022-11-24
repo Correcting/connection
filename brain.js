@@ -205,8 +205,12 @@ function actPath(parse, light=true) {
 
 // --------------------
 // Ветка очистки
-//fonction foundShit
-//function grabShit
+function foundShit() {
+	
+}
+function grabShit() {
+	
+}
 fonction isShit() {
 
 }
