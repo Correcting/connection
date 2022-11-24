@@ -29,8 +29,8 @@ function main(msg) {
 
   if (msg.m.match('уютный город Рино,')) {
     send('peer', '/eat1')
-    send('peer', '/eat2')
-    send('peer', '/eat2')
+    send('peer', '/eat1')
+    send('peer', '/eat1')
     send('peer', '/eq_480')
     send('peer', '/eq_472')
     send('peer', '/eq_43')
