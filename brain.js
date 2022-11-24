@@ -105,14 +105,6 @@ function main(msg) {
     msg.m.match('/view')
     || msg.m.match('Ты одержал победу!')
     || msg.m.match('Ты готов снова отправиться в Пустошь!')
-    || msg.m.match(' и его')
-    || msg.m.match('с виду зверька. Это был кот,')
-    || msg.m.match('— Кис-кис-кис..')
-    || msg.m.match('\n🐐')
-    || msg.m.match('\s🤘')
-    || msg.m.match('(без банды)')
-    || msg.m.match('водохранилище\n 🕳+')
-    || msg.m.match('датацентр\n 🕳+')
   ) {
     send('peer', '/view')
     return
@@ -128,6 +120,9 @@ function main(msg) {
   }
 
   // Ловим очистку
+//  if (msg.m.match(/(Получено:)|(Найдено:)/))
+//     actClean(msg)
+//     send('peer', '/cstock')
   if (msg.m.match('/dl_')) {
     actClean(msg)
     return
@@ -210,6 +205,9 @@ function actPath(parse, light=true) {
 
 // --------------------
 // Ветка очистки
+//fonction foundShit
+//function grabShit
+//fonction shitArch
 function actClean(msg) {
   const badGoods = [
    'BFGzzv-4000',
