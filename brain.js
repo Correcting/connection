@@ -205,8 +205,8 @@ function actPath(parse, light=true) {
 
 // --------------------
 // Ветка очистки
-  function foundShit(msg) {
-    send('peer', '/cstock')
+function foundShit(msg) {
+  send('peer', '/cstock')
 }
 function grabShit(msg) {
 	
