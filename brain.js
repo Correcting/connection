@@ -257,16 +257,3 @@ function grabShit(msg) {
   if (parse) send('peer', parse[1])
 }
 
-function isShit(msg) {
-
-}
-
-function actClean(msg) {
-
-  let parse
-  for (let i=0; i<badGoods.length; i++) {
-    parse = msg.m.match(new RegExp(badGoods[i]+'.*(\\/dl_\\d+)'))
-    if (parse) break
-  }
-  if (parse) send('peer', parse[1])
-}
