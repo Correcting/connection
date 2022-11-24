@@ -205,17 +205,6 @@ function actPath(parse, light=true) {
 
 // --------------------
 // Ветка очистки
-function foundShit(msg) {
-  send('peer', '/cstock')
-}
-function grabShit(msg) {
-	
-}
-function isShit(msg) {
-
-}
-
-function actClean(msg) {
   const badGoods = [
    'BFGzzv-4000',
     'Боевая броня',
@@ -244,6 +233,17 @@ function actClean(msg) {
     'Кистень',
     'Электромеч'
   ]
+function foundShit(msg) {
+  send('peer', '/cstock')
+}
+function grabShit(msg) {
+	
+}
+function isShit(msg) {
+
+}
+
+function actClean(msg) {
 
   let parse
   for (let i=0; i<badGoods.length; i++) {
