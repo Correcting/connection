@@ -129,6 +129,7 @@ function main(msg) {
     actClean(msg)
     return
   }
+  
   if (parse = msg.m.match(/\/del_\d+/)) {
     send('peer', parse[0])
     return
