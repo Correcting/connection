@@ -256,4 +256,3 @@ function grabShit(msg) {
   }
   if (parse) send('peer', parse[1])
 }
-
