@@ -249,7 +249,7 @@ function foundShit(msg) {
 }
 
 function grabShit(msg) {
-let parse
+  let parse
   for (let i=0; i<badGoods.length; i++) {
     parse = msg.m.match(new RegExp(badGoods[i]+'.*(\\/dl_\\d+)'))
     if (parse) break
