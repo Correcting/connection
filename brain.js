@@ -242,7 +242,7 @@ function foundShit(msg) {
     parse = msg.m.match(new RegExp('(Получено:)|(Найдено:)\\s'+badGoods[i]))
     if (parse) break
   }
-  send('peer', '/cstock')
+    if (parse) send('peer', '/cstock')
 }
 function grabShit(msg) {
 	
