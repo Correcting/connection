@@ -211,7 +211,7 @@ function foundShit() {
 function grabShit() {
 	
 }
-fonction isShit() {
+function isShit() {
 
 }
 
