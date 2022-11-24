@@ -225,7 +225,7 @@ const badGoods = [
   'Шипастая бита',
   'Лазерный тесак',
   'Шляпа минитмена',
-//  'Мото-защита',
+  'Мото-защита',
   'Плотный капюшон',
   'Противогаз',
   'Супермолот',
@@ -249,7 +249,11 @@ function foundShit(msg) {
 }
 
 function grabShit(msg) {
-	
+let parse
+  for (let i=0; i<badGoods.length; i++) {
+    parse = msg.m.match(new RegExp(badGoods[i]+'.*(\\/dl_\\d+)'))
+    if (parse) break
+  }
 }
 
 function isShit(msg) {
