@@ -142,7 +142,7 @@ function main(msg) {
   }
 }
 
-fonction sendStat(msg) {
+function sendStat(msg) {
   let
   parse = msg.m.match(new RegExp(badGoods[i]+'.*(\\/dl_\\d+)'))
 
