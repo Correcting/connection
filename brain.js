@@ -143,9 +143,9 @@ function main(msg) {
 }
 
 function sendStat(msg) {
-    let parse
+  let parse
   if (parse = msg.m.match(/🚷[\s\S]*👣(\d+)км/))
-    if (actPath(parse[1], false)) return
+  if ((parse[1]>60)) return
 
 }
 
