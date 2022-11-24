@@ -122,8 +122,8 @@ function main(msg) {
 
   // Ловим очистку
   if (msg.m.match(/(Получено:)|(Найдено:)/)) {
-     foundShit(msg)
-     return
+    foundShit(msg)
+    return
   }
      
   if (msg.m.match('/dl_')) {
