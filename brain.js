@@ -239,7 +239,7 @@ function foundShit(msg) {
 
   let parse
   for (let i=0; i<badGoods.length; i++) {
-    parse = msg.m.match(new RegExp('(Получено:)|(Найдено:)\\s'+badGoods[i]+'.*(\\/dl_\\d+)'))
+    parse = msg.m.match(new RegExp('(Получено:)|(Найдено:)\\s'+badGoods[i]))
     if (parse) break
   }
   send('peer', '/cstock')
