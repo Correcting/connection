@@ -143,7 +143,10 @@ function main(msg) {
 }
 
 fonction sendStat(msg) {
-  
+  let
+  parse = msg.m.match(new RegExp(badGoods[i]+'.*(\\/dl_\\d+)'))
+
+}
 
 // --------------------
 // Ветка километража
