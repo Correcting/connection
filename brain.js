@@ -143,8 +143,9 @@ function main(msg) {
 }
 
 function sendStat(msg) {
-  let
-  parse = msg.m.match(new RegExp(badGoods[i]+'.*(\\/dl_\\d+)'))
+    let parse
+  if (parse = msg.m.match(/🚷[\s\S]*👣(\d+)км/))
+    if (actPath(parse[1], false)) return
 
 }
 
