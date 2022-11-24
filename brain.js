@@ -206,7 +206,7 @@ function actPath(parse, light=true) {
 // --------------------
 // Ветка очистки
 const badGoods = [
- 'BFGzzv-4000',
+  'BFGzzv-4000',
   'Боевая броня',
   'Армагеддец',
   'Потрошитель',
