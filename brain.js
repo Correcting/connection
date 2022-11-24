@@ -119,6 +119,11 @@ function main(msg) {
     send('peer', parse[0])
     return
   }
+  
+    //Ловим мэсседж
+  if (msg.m.match('Сражение с') {
+    sendMsg(msg)
+  }
 
   // Ловим очистку
   if (msg.m.match(/(Получено:)|(Найдено:)/)) {
