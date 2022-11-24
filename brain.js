@@ -207,7 +207,10 @@ function actPath(parse, light=true) {
 // Ветка очистки
 //fonction foundShit
 //function grabShit
-//fonction shitArch
+fonction isShit() {
+
+}
+
 function actClean(msg) {
   const badGoods = [
    'BFGzzv-4000',
