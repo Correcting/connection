@@ -120,9 +120,9 @@ function main(msg) {
   }
 
   // Ловим очистку
-//  if (msg.m.match(/(Получено:)|(Найдено:)/))
-//     actClean(msg)
-//     send('peer', '/cstock')
+  if (msg.m.match(/(Получено:)|(Найдено:)/))
+     actClean(msg)
+     send('peer', '/cstock')
   if (msg.m.match('/dl_')) {
     actClean(msg)
     return
