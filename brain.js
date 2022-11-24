@@ -254,6 +254,7 @@ function grabShit(msg) {
     parse = msg.m.match(new RegExp(badGoods[i]+'.*(\\/dl_\\d+)'))
     if (parse) break
   }
+  if (parse) send('peer', parse[1])
 }
 
 function isShit(msg) {
