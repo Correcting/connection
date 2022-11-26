@@ -1,0 +1,17 @@
+{
+  "name":         "tgsup",
+  "version":      "1.2.2",
+  "description":  "nodesc",
+  "main":         "app.js",
+  "author":       "Yog",
+  "license":      "UNLICENSED",
+  "keywords":     ["Telegram", "human", "emulator"],
+  "repository":   "github:Correcting/connection",
+  "dependencies": {
+    "@mtproto/core": "^6.2.0",
+    "prompt-sync":   "^4.2.0"
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}
