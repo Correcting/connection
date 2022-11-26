@@ -8,23 +8,23 @@ global       = require('./config.js')()
 // Асинхронная функция запуска
 const start = async function() {
   // Подключаемся к ТГ
-  let tg = global.tg = new TgApi(sec.apiId, sec.apiHash)
+  let tg = global.tg = new TgApi(global.sec.apiId, global.sec.apiHash)
 
   // Запрос кода подтверждения от ТГ юзеру
   let tgAns = await tg.call('auth.sendCode', {
-    phone_number: sec.phoneNo,
-    settings: {_: 'codeSettings'}
+    phone_number: global.sec.phoneNo,
+    settings:     {_: 'codeSettings'}
   })
-  sec.phoneCodeHash = tgAns.phone_code_hash
+  global.sec.phoneCodeHash = tgAns.phone_code_hash
 
   // Спрашиваем у юзера код
-  sec.phoneCode = prompt('Какой код прислала ТГ? > ')
+  global.sec.phoneCode = prompt('Какой код прислала ТГ? > ')
 
   // Логинимся
   tgAns = await tg.call('auth.signIn', {
-    phone_number:    sec.phoneNo,
-    phone_code:      sec.phoneCode,
-    phone_code_hash: sec.phoneCodeHash
+    phone_number:    global.sec.phoneNo,
+    phone_code:      global.sec.phoneCode,
+    phone_code_hash: global.sec.phoneCodeHash
   })
 
   // Настраиваем слушателей
