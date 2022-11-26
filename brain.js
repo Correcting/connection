@@ -8,19 +8,24 @@ msg - это объект вида: {
     m:  текст сообщения
   }
 */
-  main(msg)
+  if (msg.n == 'peer') main(msg) // Обрабатываем пока только собеседника "peer"
   console.log(msg)
   console.log('--------------------')
 }
 module.exports = brain // Единственный наш интерфейс во внешний мир
 
-// Функция отправки
+// Отправка
 function send(name, msg) {
-  return global.out.push({n: name, m: msg})
+  return global.out.push({t: 's', n: name, m: msg})
+}
+
+// Пересылка
+function fwd(msgId) {
+  return global.out.push({t: 'f', id: msgId})
 }
 
 // --------------------
-// Главный роутер
+// Главный роутер основной игры
 function main(msg) {
   if (msg.m.match('Чат лагеря')) {
     send('peer', '🏘В Нью-Рино')
@@ -119,11 +124,6 @@ function main(msg) {
     send('peer', parse[0])
     return
   }
-  
-  //Ловим мэсседж
-  if (msg.m.match('Сражение с') {
-    sendStat(msg)
-  }
 
   // Ловим очистку
   if (msg.m.match(/(Получено:)|(Найдено:)/)) {
@@ -140,13 +140,6 @@ function main(msg) {
     send('peer', parse[0])
     return
   }
-}
-
-function sendStat(msg) {
-  let parse
-  if (parse = msg.m.match(/👣(\d+)км/))
-  if (parse[1] > 60) forward('pveSend', =451=)
-
 }
 
 // --------------------
@@ -226,6 +219,7 @@ const badGoods = [
   'Боевая броня',
   'Армагеддец',
   'Потрошитель',
+  'Боевая броня',
   'Броня братства',
   'Кинжал',
   'Кожанный нагрудник',
@@ -253,7 +247,7 @@ const badGoods = [
 function foundShit(msg) {
   let parse
   for (let i=0; i<badGoods.length; i++) {
-    parse = msg.m.match(new RegExp('(Получено:)|(Найдено:)\\s'+badGoods[i]))
+    parse = msg.m.match(new RegExp('(Получено:)|(Найдено:).*'+badGoods[i], 's'))
     if (parse) break
   }
   if (parse) send('peer', '/cstock')
