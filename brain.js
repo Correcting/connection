@@ -162,7 +162,7 @@ function parsTup(str) {
 
 //
 function parsTdown(str) {
-  let parse = str.match(/(Обычный день)|(ЛНП).*01 ч. 46 мин./s)
+  let parse = str.match(/(\d+) ч. (\d+) мин./s)
 }
 
 // --------------------
