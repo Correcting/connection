@@ -157,7 +157,8 @@ function raid(msg) {
 
 //
 function parsTup(str) {
-  let parse = str.match(/⏳04 час. 57 мин, 17 сек./)
+  let parse = str.match(/⏳\s(\d+)\sчас\.\s(\d+)\sмин,\s(\d+)\sсек\./)
+  return ((parse[1]*60+parse[2])*60+parse[3])*1000
 }
 
 //
