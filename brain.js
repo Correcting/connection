@@ -147,7 +147,7 @@ function main(msg) {
 function raid(msg) {
   let parse
   if (parse = msg.m.match(/⛺️\sЛагеря.*(\d+).*(\d+).*(\d+).*Мельдонием/s)) {
-    global.raid
+    global.raid.push({l:
     return
   }
 }
