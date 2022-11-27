@@ -1,4 +1,4 @@
-// Техническая функция: интуиция говорит: "Оставить!" - хрен знает почему
+З// Техническая функция: интуиция говорит: "Оставить!" - хрен знает почему
 const brain = function(msg) {
 /*
 msg - это объект вида: {
@@ -147,7 +147,7 @@ function main(msg) {
 function raid(msg) {
   let parse
   if (parse = msg.m.match(/⛺️\sЛагеря.*(\d+).*(\d+).*(\d+).*Мельдонием/s)) {
-    global.raid.push({l:
+    global.raid = {l: parse[1], t: parse[2], T: parse[3]}
     return
   }
 }
