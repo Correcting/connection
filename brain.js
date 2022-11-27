@@ -146,7 +146,7 @@ function main(msg) {
 // Роутер рейдовой залупы
 function raid(msg) {
   if (msg.m.match(' _ ')) {
-    fwd('peer', ' _ ')
+    send('peer', ' _ ')
     return
   }
 }
