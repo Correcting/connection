@@ -147,12 +147,7 @@ function main(msg) {
 function raid(msg) {
   let parse
   if (parse = msg.m.match(/⛺️\sЛагеря.*(\d+).*(\d+).*(\d+).*Мельдонием/s)) {
-    send('peer', ' _ ')
-    return
-  }
-  
-  if (parse = msg.m.match(/\/del_\d+/)) {
-    send('peer', parse[0])
+    global.raid
     return
   }
 }
