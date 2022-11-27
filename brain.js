@@ -151,8 +151,8 @@ function raid(msg) {
   }
   
   if (parse = msg.m.match(/\/del_\d+/)) {
-  send('peer', parse[0])
-  return
+    send('peer', parse[0])
+    return
   }
 }
 
