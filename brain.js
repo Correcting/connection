@@ -148,6 +148,9 @@ function raid(msg) {
   let parse
   if (parse = msg.m.match(/⛺️\sЛагеря.*(\d+).*(\d+).*(\d+).*Мельдонием/s)) {
     global.raid = {l: parse[1], t: parse[2], T: parse[3]}
+    setTimeout(() => {
+       //ваш код шо делать потом
+    })
     return
   }
 }
