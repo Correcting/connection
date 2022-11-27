@@ -155,6 +155,16 @@ function raid(msg) {
   }
 }
 
+//
+function parsTup(str) {
+  let parse = str.match(/⏳04 час. 57 мин, 17 сек./)
+}
+
+//
+function parsTdown(str) {
+  let parse = str.match(/(Обычный день)|(ЛНП).*01 ч. 46 мин./s)
+}
+
 // --------------------
 // Ветка километража
 function actPath(parse, light=true) {
