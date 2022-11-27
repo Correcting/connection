@@ -150,7 +150,7 @@ function raid(msg) {
     global.raid = {l: parse[1], t: parse[2], T: parse[3]}
     setTimeout(() => {
        //ваш код шо делать потом
-    })
+    }, 4000)
     return
   }
 }
