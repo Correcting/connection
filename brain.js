@@ -37,9 +37,6 @@ function main(msg) {
     send('peer', '/eat1')
     send('peer', '/eat1')
     send('peer', '/eat1')
-    send('peer', '/eq_480')
-    send('peer', '/eq_472')
-    send('peer', '/eq_43')
     send('peer', '👣Пустошь')
     return
   }
@@ -67,7 +64,6 @@ function main(msg) {
   }
 
   if (msg.m.match('📯🚷 Бэт-пещера')) {
-    send('peer', '/eq_480')
     send('peer', 'Двигаться дальше')
     return
   }
@@ -181,7 +177,7 @@ function actPath(parse, light=true) {
         send('peer', 'Старая шахта')
         send('peer', 'Двигаться дальше')
         return true
-//      case 12:
+//      case 12: //case's options : 9,12, 20, 46, 54
 //        send('peer', '/voevat_suda')
 //        return true
 //      case 22:
@@ -190,18 +186,10 @@ function actPath(parse, light=true) {
       case 27:
         send('peer', '👣Идти дaльше')
         return true
-      case 40:
-        send('peer', '/eq_54')
-        send('peer', '/eq_73')
-        send('peer', '👣Идти дaльше')
-        return true
       case 45:
         send('peer', '🌁Высокий Хротгар')
         send('peer', 'Двигаться дальше')
         return true
-//      case 46:
-//        send('peer', '/voevat_suda')
-//        return true
 //      case 50:
 //        send('peer', '🛑Руины Гексагона')
 //        send('peer', 'Двигаться дальше')
@@ -213,7 +201,7 @@ function actPath(parse, light=true) {
 //      case 52:
 //        send('peer', '🚷В Темную зону')
 //        return true
-      case 68: case 69:
+      case 71:
         send('peer', '⛺️Вернуться')
         send('peer', 'Вернуться в лагерь')
         return true
@@ -228,15 +216,13 @@ function actPath(parse, light=true) {
       case 34:
         send('peer', '🦇Бэт-пещера')
         send('peer', 'Двигаться дальше')
-        send('peer', '/eq_53')
         return true
       case 56:
         send('peer', '🔬Научный комплекс')
         send('peer', 'Двигаться дальше')
         return true
-//      case 63:
+//      case 63: //case's options : 24, 32, 38, 63
 //        send('peer', '/voevat_suda')
-//        send('peer', '/stealth')
 //        return true
       default: return false // Указанный километраж не найден
     }
