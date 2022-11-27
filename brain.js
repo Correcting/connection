@@ -164,6 +164,7 @@ function parsTup(str) {
 //
 function parsTdown(str) {
   let parse = str.match(/(\d+) ч\. (\d+) мин\./)
+  return ((parse[1]*60+parse[2])*60)*1000
 }
 
 // --------------------
