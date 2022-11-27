@@ -33,14 +33,6 @@ function main(msg) {
     return
   }
 
-// --------------------
-// Роутер рейдовой залупы
-function raid(msg) {
-  if (msg.m.match(' _ ')) {
-    fwd('peer', ' _ ')
-    return
-  }
-
   if (msg.m.match('уютный город Рино,')) {
     send('peer', '/eat1')
     send('peer', '/eat1')
@@ -147,6 +139,14 @@ function raid(msg) {
   
   if (parse = msg.m.match(/\/del_\d+/)) {
     send('peer', parse[0])
+    return
+  }
+}
+
+// Роутер рейдовой залупы
+function raid(msg) {
+  if (msg.m.match(' _ ')) {
+    fwd('peer', ' _ ')
     return
   }
 }
