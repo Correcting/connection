@@ -155,13 +155,13 @@ function raid(msg) {
   }
 }
 
-//
+// Время из верхних часов сообщения о рейде
 function parsTup(str) {
   let parse = str.match(/⏳\s(\d+)\sчас\.\s(\d+)\sмин,\s(\d+)\sсек\./)
   return ((parse[1]*60+parse[2])*60+parse[3])*1000
 }
 
-//
+// Время из нижних часов сообщения о рейде
 function parsTdown(str) {
   let parse = str.match(/(\d+) ч\. (\d+) мин\./)
   return ((parse[1]*60+parse[2])*60)*1000
