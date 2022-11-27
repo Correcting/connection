@@ -181,6 +181,9 @@ function actPath(parse, light=true) {
         send('peer', 'Старая шахта')
         send('peer', 'Двигаться дальше')
         return true
+//      case 12:
+//        send('peer', '/voevat_suda')
+//        return true
 //      case 22:
 //        send('peer', '🚷В Темную зону')
 //        return true
@@ -196,6 +199,9 @@ function actPath(parse, light=true) {
         send('peer', '🌁Высокий Хротгар')
         send('peer', 'Двигаться дальше')
         return true
+//      case 46:
+//        send('peer', '/voevat_suda')
+//        return true
 //      case 50:
 //        send('peer', '🛑Руины Гексагона')
 //        send('peer', 'Двигаться дальше')
