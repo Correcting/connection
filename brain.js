@@ -164,7 +164,7 @@ function parsTup(str) {
 // Время из нижних часов сообщения о рейде
 function parsTdown(str) {
   let parse = str.match(/(\d+) ч\. (\d+) мин\./)
-  return ((parse[1]*60+parse[2])*60)*1000
+  return (parse[1]*60+parse[2])*60000
 }
 
 // --------------------
