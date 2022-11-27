@@ -145,7 +145,7 @@ function main(msg) {
 
 // Роутер рейдовой залупы
 function raid(msg) {
-  if (msg.m.match(/⛺️\sЛагеря.*📍\s(\d+)км:/)) {
+  if (msg.m.match(/⛺️\sЛагеря.*📍\s(\d+)км/s*)) {
     send('peer', ' _ ')
     return
   }
