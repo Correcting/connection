@@ -181,9 +181,9 @@ function actPath(parse, light=true) {
 //      case 12: //case's options : 9,12, 20, 46, 54
 //        send('peer', '/voevat_suda')
 //        return true
-//      case 22:
-//        send('peer', '🚷В Темную зону')
-//        return true
+      case 22:
+        send('peer', '🚷В Темную зону')
+        return true
       case 27:
         send('peer', '👣Идти дaльше')
         return true
@@ -199,9 +199,9 @@ function actPath(parse, light=true) {
         send('peer', '🛏Безопасный привал')
         send('peer', '/deeprest')
         return true
-//      case 52:
-//        send('peer', '🚷В Темную зону')
-//        return true
+      case 52:
+        send('peer', '🚷В Темную зону')
+        return true
       case 71:
         send('peer', '⛺️Вернуться')
         send('peer', 'Вернуться в лагерь')
