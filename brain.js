@@ -125,6 +125,7 @@ function main(msg) {
   // Ловим очистку
   if (msg.m.match(/(Получено:)|(Найдено:)/)) {
     foundShit(msg)
+    console.log('ok')
     return
   }
      
