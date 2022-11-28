@@ -264,7 +264,7 @@ const badGoods = [
 function foundShit(msg) {
   let parse
   for (let i=0; i<badGoods.length; i++) {
-    parse = msg.m.match(new RegExp('(Получено:).*'+badGoods[i], 's'))
+    parse = msg.m.match(new RegExp('Получено.*'+badGoods[i], 's'))
     if (parse) break
   }
   if (parse) send('peer', '/cstock')
