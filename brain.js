@@ -202,7 +202,7 @@ function actPath(parse, light=true) {
       case 52:
         send('peer', '🚷В Темную зону')
         return true
-      case 71:
+      case 73:
         send('peer', '⛺️Вернуться')
         send('peer', 'Вернуться в лагерь')
         return true
