@@ -30,13 +30,12 @@ function main(msg) {
   }
 
   if (msg.m.match('уютный город Рино,')) {
-    global.cite = 'рино'
+    global.st.cite = 'рино'
     return
   }
 
   if (msg.m.match('в этот раз уже буквально.')) {
-    send('peer', '⛺️Вернуться')
-    send('peer', 'Вернуться в лагерь')
+    global.st.lowHealth = true
     return
   }
 
