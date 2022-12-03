@@ -100,5 +100,5 @@ function toBrain(msg) {
   // Сохраняем только сообщения от основной игры
   if (msg.n == 'peer') global.log.push(msg)
   // Проверяем ключ чата
-  if (global.sec.ids[msg.n].acc) brain(msg)
+  if (global.sec.ids[msg.n].acc) brain.run(msg)
 }
