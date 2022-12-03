@@ -6,18 +6,6 @@ const actPeer = require('./lib/actPeer.js')
 //const anPve   = require('./lib/anPve.js')
 //const actPve  = require('./lib/actPve.js')
 
-// Дерево состояний (как мы видим мир)
-global.st = {
-  cite:      null,  // где мы по типу местности?
-  view:      false, // осмотрелись ли?
-  dark:      false, // темная ли зона?
-  x:         null,  // какой сейчас километр?
-  angyMob:   false, // есть ли рядом злой моб?
-  goodMob:   false, // есть ли рядом добрый моб?
-  lowHealth: false, // игра дала понять, что мало здоровья?
-  garbage:   false  // что по хламу в рюкзаке?
-}
-
 /*
 msg - это объект вида: {
   t:  new Date() на момент получения обновления от ТГ,
@@ -27,6 +15,19 @@ msg - это объект вида: {
 }
 */
 module.exports = class {
+  constructor() {
+    // Дерево состояний (как мы видим мир)
+    global.st = {
+      cite:      null,  // где мы по типу местности?
+      view:      false, // осмотрелись ли?
+      dark:      false, // темная ли зона?
+      x:         null,  // какой сейчас километр?
+      angyMob:   false, // есть ли рядом злой моб?
+      goodMob:   false, // есть ли рядом добрый моб?
+      lowHealth: false, // игра дала понять, что мало здоровья?
+      garbage:   false  // что по хламу в рюкзаке?
+    }
+  }
 
 function(msg) {
   console.log('--------------------')
