@@ -16,6 +16,7 @@ global.st = {
 // Техническая функция: интуиция говорит: "Оставить!" - хрен знает почему
 const brain = function(msg) {
   console.log('--------------------')
+  console.log(global.st)
   console.log(msg)
 /*
 msg - это объект вида: {
