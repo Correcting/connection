@@ -124,7 +124,7 @@ function main(msg) {
 
   // Ловим очистку
   if (msg.m.match('Получено')) {
-    foundShit(msg)
+//    foundShit(msg)
     console.log('ok')
     return
   }
