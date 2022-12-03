@@ -1,5 +1,6 @@
 // Грузим либы
-const anal  = require('./lib/anal.js')
+const analyse = require('./lib/analyse.js')
+const action  = require('./lib/action.js')
 
 // Техническая функция: интуиция говорит: "Оставить!" - хрен знает почему
 const brain = function(msg) {
