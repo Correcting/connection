@@ -56,6 +56,7 @@ function main(msg) {
   // Ловим километраж
   let parse
   if (parse = msg.m.match(/🚷.*👣(\d+)км/s))
+    global.st.x         = parse[1]
     if (actPath(parse[1], false)) return
   if (parse = msg.m.match(/🚷.*(\d+)\s?км/))
     if (actPath(parse[1], false)) return
