@@ -21,6 +21,7 @@ global.st = {
   dark:      false,
   x:         null,
   angyMob:   false,
+  goodMob:   false,
   lowHealth: false
 }
 
