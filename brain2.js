@@ -11,7 +11,7 @@ msg - это объект вида: {
   }
 */
   if (msg.n == 'peer') main(msg) // Обрабатываем собеседника "peer"
-  if (msg.n == 'info') raid(msg) // Обрабатываем "info"
+//  if (msg.n == 'info') raid(msg) // Обрабатываем "info"
 }
 module.exports = brain // Единственный наш интерфейс во внешний мир
 
@@ -21,5 +21,7 @@ global.st = {
 
   }
 }
+
+
 
 
