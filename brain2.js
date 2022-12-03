@@ -53,6 +53,8 @@ function main(msg) {
   ) global.st.angyMob   = true
   if (msg.m.match('🚷'))
     global.st.dark      = true
+  else
+    global.st.dark      = false
 
   // Ловим километраж
   let parse
