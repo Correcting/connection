@@ -38,9 +38,7 @@ function main(msg) {
   if (
     msg.m.match('📯🚷 ❤️')
     || msg.m.match('📯❤️')
-  ) {
-    global.st.cite      = 'данж'
-  }
+  ) global.st.cite      = 'данж'
 
   if (msg.m.match('📯🚷 Бэт-пещера')) {
     send('peer', 'Двигаться дальше')
