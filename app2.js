@@ -1,7 +1,7 @@
 // Грузим либы и настройки
 const TgApi  = require('./tg.js')
 const prompt = require('prompt-sync')()
-const brain  = require('./brain2.js')
+const Brain  = require('./brain2.js')
 global       = require('./config.js')()
 
 //------------------
