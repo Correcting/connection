@@ -26,7 +26,9 @@ msg - это объект вида: {
   m:  текст сообщения
 }
 */
-module.exports = function(msg) {
+module.exports = class {
+
+function(msg) {
   console.log('--------------------')
   console.log(global.st)
   console.log(msg)
@@ -49,4 +51,5 @@ module.exports = function(msg) {
     actInfo(msg)
   }
 */
+}
 }
