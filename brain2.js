@@ -19,9 +19,9 @@ module.exports = brain // Единственный наш интерфейс в�
 global.st = {
   cite:      null,
   dark:      false,
+  x:         null,
   angyMob:   false,
-  lowHealth: null,
-  
+  lowHealth: null
 }
 
 // --------------------
