@@ -24,9 +24,12 @@ global.st = {
 // --------------------
 // Главный роутер основной игры
 function main(msg) {
-  if (msg.m.match('Чат лагеря'))                global.st.cite      = 'лагерь'
-  if (msg.m.match('уютный город Рино,'))        global.st.cite      = 'рино'
-  if (msg.m.match('в этот раз уже буквально.')) global.st.lowHealth = true
+  if (msg.m.match('Чат лагеря'))
+    global.st.cite      = 'лагерь'
+  if (msg.m.match('уютный город Рино,'))
+    global.st.cite      = 'рино'
+  if (msg.m.match('в этот раз уже буквально.'))
+    global.st.lowHealth = true
   if (
     msg.m.match('Твой путь преградил исполинских размеров монстр.')
     || msg.m.match('в этот раз ты не получил сдачи.')
