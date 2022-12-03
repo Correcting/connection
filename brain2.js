@@ -31,13 +31,13 @@ module.exports = class {
 
   run(msg) {
     console.log('--------------------')
-    console.log(global.st)
+    console.log('До анализа:', global.st)
     console.log(msg)
 
     // Обрабатываем собеседника "peer"
     if (msg.n == 'peer') {
       anPeer(msg)
-      console.log('До анализа:', global.st)
+      console.log('После анализа:', global.st)
       actPeer(msg)
     }
   /*
