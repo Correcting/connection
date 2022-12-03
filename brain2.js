@@ -18,7 +18,9 @@ module.exports = brain // Единственный наш интерфейс в�
 // Дерево состояний
 global.st = {
   cite:      null,
-  lowHealth: null
+  mob:       false,
+  lowHealth: null,
+  
 }
 
 // --------------------
