@@ -26,8 +26,9 @@ msg - это объект вида: {
     m:  текст сообщения
   }
 */
+  // Обрабатываем собеседника "peer"
   if (msg.n == 'peer') {
-    analyse(msg) // Обрабатываем собеседника "peer"
+    analyse(msg)
     action(msg)
   }
 //  if (msg.n == 'info') raid(msg) // Обрабатываем "info"
