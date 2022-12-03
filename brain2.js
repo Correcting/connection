@@ -2,6 +2,17 @@
 const analyse = require('./lib/analyse.js')
 const action  = require('./lib/action.js')
 
+// Дерево состояний
+global.st = {
+  cite:      null,
+  dark:      false,
+  x:         null,
+  angyMob:   false,
+  goodMob:   false,
+  lowHealth: false,
+  garbage:   false
+}
+
 // Техническая функция: интуиция говорит: "Оставить!" - хрен знает почему
 const brain = function(msg) {
   console.log('--------------------')
@@ -19,16 +30,7 @@ msg - это объект вида: {
 }
 module.exports = brain // Единственный наш интерфейс во внешний мир
 
-// Дерево состояний
-global.st = {
-  cite:      null,
-  dark:      false,
-  x:         null,
-  angyMob:   false,
-  goodMob:   false,
-  lowHealth: false,
-  garbage:   false
-}
+
 
 // --------------------
 
