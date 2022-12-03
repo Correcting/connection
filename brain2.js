@@ -1,5 +1,5 @@
 // Грузим либы
-const TgApi  = require('./lib/anal.js')
+const anal  = require('./lib/anal.js')
 
 // Техническая функция: интуиция говорит: "Оставить!" - хрен знает почему
 const brain = function(msg) {
