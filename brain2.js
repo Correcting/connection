@@ -14,7 +14,7 @@ global.st = {
 }
 
 // Техническая функция: интуиция говорит: "Оставить!" - хрен знает почему
-const brain = function(msg) {
+module.exports = function(msg) {
   console.log('--------------------')
   console.log(global.st)
   console.log(msg)
@@ -29,7 +29,6 @@ msg - это объект вида: {
   if (msg.n == 'peer') main(msg) // Обрабатываем собеседника "peer"
 //  if (msg.n == 'info') raid(msg) // Обрабатываем "info"
 }
-module.exports = brain // Единственный наш интерфейс во внешний мир
 
 
 
