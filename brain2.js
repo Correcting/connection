@@ -29,28 +29,28 @@ module.exports = class {
     }
   }
 
-function(msg) {
-  console.log('--------------------')
-  console.log(global.st)
-  console.log(msg)
+  run(msg) {
+    console.log('--------------------')
+    console.log(global.st)
+    console.log(msg)
 
-  // Обрабатываем собеседника "peer"
-  if (msg.n == 'peer') {
-    anPeer(msg)
-    actPeer(msg)
-  }
-/*
-  // Обрабатываем собеседника "info"
-  if (msg.n == 'info') {
-    anInfo(msg)
-    actInfo(msg)
-  }
+    // Обрабатываем собеседника "peer"
+    if (msg.n == 'peer') {
+      anPeer(msg)
+      actPeer(msg)
+    }
+  /*
+    // Обрабатываем собеседника "info"
+    if (msg.n == 'info') {
+      anInfo(msg)
+      actInfo(msg)
+    }
 
-  // Обрабатываем собеседника "pve"
-  if (msg.n == 'pve') {
-    anInfo(msg)
-    actInfo(msg)
+    // Обрабатываем собеседника "pve"
+    if (msg.n == 'pve') {
+      anInfo(msg)
+      actInfo(msg)
+    }
+  */
   }
-*/
-}
 }
