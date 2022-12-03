@@ -51,10 +51,7 @@ function main(msg) {
     || msg.m.match('Тебе не уйти от противника')
     || msg.m.match('Во время вылазки на тебя напал')
   ) global.st.angyMob   = true
-  if (msg.m.match('🚷'))
-    global.st.dark      = true
-  else
-    global.st.dark      = false
+  global.st.dark        = Boolean(msg.m.match('🚷'))
 
   // Ловим километраж
   let parse
