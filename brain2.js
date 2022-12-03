@@ -68,17 +68,6 @@ function main(msg) {
     global.st.x         = parse[1]
   if (parse = msg.m.match(/👣(\d+)\s?км/))
     global.st.x         = parse[1]
-
-  
-
-
-
-  
-
-  if (msg.m.match('Ты очень голоден.')) {
-    send('peer', '/myfood')
-    return
-  }
   
   if (parse = msg.m.match(/\/use_1[0-2]\d/g)) {
     send('peer', parse[0])
