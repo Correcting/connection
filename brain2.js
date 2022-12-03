@@ -29,10 +29,7 @@ function main(msg) {
   }
 
   if (msg.m.match('уютный город Рино,')) {
-    send('peer', '/eat1')
-    send('peer', '/eat1')
-    send('peer', '/eat1')
-    send('peer', '👣Пустошь')
+    global.cite = 'рино'
     return
   }
 
