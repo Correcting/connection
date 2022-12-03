@@ -22,7 +22,8 @@ global.st = {
   x:         null,
   angyMob:   false,
   goodMob:   false,
-  lowHealth: false
+  lowHealth: false,
+  garbage:   false
 }
 
 // --------------------
@@ -68,11 +69,6 @@ function main(msg) {
     global.st.x         = parse[1]
   if (parse = msg.m.match(/👣(\d+)\s?км/))
     global.st.x         = parse[1]
-  
-  if (parse = msg.m.match(/\/use_1[0-2]\d/g)) {
-    send('peer', parse[0])
-    return
-  }
 
   // Ловим очистку
   if (msg.m.match('Получено')) {
