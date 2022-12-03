@@ -52,6 +52,8 @@ function main(msg) {
     || msg.m.match('Тебе не уйти от противника')
     || msg.m.match('Во время вылазки на тебя напал')
   ) global.st.angyMob   = true
+  if (msg.m.match('Ты встретил бродячего торговца,'))
+    global.st.goodMob   = true
   global.st.dark        = Boolean(msg.m.match('🚷'))
 
   // Ловим километраж
@@ -63,8 +65,7 @@ function main(msg) {
   if (parse = msg.m.match(/👣(\d+)\s?км/))
     global.st.x         = parse[1]
 
-  if (msg.m.match('Ты встретил бродячего торговца,'))
-    global.st.goodMob   = true
+  
 
   if (
     msg.m.match('Ты оценил обстановку вокруг.')
