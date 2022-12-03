@@ -31,7 +31,6 @@ module.exports = class {
 
   run(msg) {
     console.log('--------------------')
-    console.log('До анализа:', global.st)
     console.log(msg)
 
     // Обрабатываем собеседника "peer"
