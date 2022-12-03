@@ -63,11 +63,8 @@ function main(msg) {
   if (parse = msg.m.match(/👣(\d+)\s?км/))
     global.st.x         = parse[1]
 
-  if (msg.m.match('Ты встретил бродячего торговца,')) {
-    send('peer', '/buy_5i')
-    send('peer', '/view')
-    return
-  }
+  if (msg.m.match('Ты встретил бродячего торговца,'))
+    global.st.goodMob   = true
 
   if (
     msg.m.match('Ты оценил обстановку вокруг.')
