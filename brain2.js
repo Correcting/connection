@@ -72,20 +72,7 @@ function main(msg) {
 
   // Ловим очистку
   if (msg.m.match('Получено')) {
-//    foundShit(msg)
-    console.log('ok')
-    return
-  }
-     
-  if (msg.m.match('/dl_')) {
-    grabShit(msg)
-    return
-  }
-  
-  if (parse = msg.m.match(/\/del_\d+/)) {
-    send('peer', parse[0])
-    return
-  }
+    global.st.garbage   = true
 }
 
 
