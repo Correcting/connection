@@ -72,8 +72,7 @@ function main(msg) {
   if (
     msg.m.match('Ты одержал победу!')
     || msg.m.match('Ты готов снова отправиться в Пустошь!')
-  ) {
-    global.st.angyMob   = false
+  ) global.st.angyMob   = false
 
   if (msg.m.match('Ты очень голоден.')) {
     send('peer', '/myfood')
