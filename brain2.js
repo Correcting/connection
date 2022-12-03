@@ -30,5 +30,5 @@ msg - это объект вида: {
     analyse(msg)
     action(msg)
   }
-//  if (msg.n == 'info') raid(msg) // Обрабатываем "info"
+//  if (msg.n == 'info') raid(msg) // Обрабатываем собеседника "info"
 }
