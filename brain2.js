@@ -1,34 +1,52 @@
 // Грузим либы
-const analyse = require('./lib/analyse.js')
-const action  = require('./lib/action.js')
+const anPeer  = require('./lib/anPeer.js')
+const actPeer = require('./lib/actPeer.js')
+//const anInfo  = require('./lib/anInfo.js')
+//const actInfo = require('./lib/actInfo.js')
+//const anPve   = require('./lib/anPve.js')
+//const actPve  = require('./lib/actPve.js')
 
-// Дерево состояний
+// Дерево состояний (как мы видим мир)
 global.st = {
-  cite:      null,
-  dark:      false,
-  x:         null,
-  angyMob:   false,
-  goodMob:   false,
-  lowHealth: false,
-  garbage:   false
+  cite:      null,  // где мы по типу местности?
+  view:      false, // осмотрелись ли?
+  dark:      false, // темная ли зона?
+  x:         null,  // какой сейчас километр?
+  angyMob:   false, // есть ли рядом злой моб?
+  goodMob:   false, // есть ли рядом добрый моб?
+  lowHealth: false, // игра дала понять, что мало здоровья?
+  garbage:   false  // что по хламу в рюкзаке?
 }
 
+/*
+msg - это объект вида: {
+  t:  new Date() на момент получения обновления от ТГ,
+  id: ТГ id юзера,
+  n:  наше имя юзера из списка sec.ids,
+  m:  текст сообщения
+}
+*/
 module.exports = function(msg) {
   console.log('--------------------')
   console.log(global.st)
   console.log(msg)
-/*
-msg - это объект вида: {
-    t:  new Date() на момент получения обновления от ТГ,
-    id: ТГ id юзера,
-    n:  наше имя юзера из списка sec.ids,
-    m:  текст сообщения
-  }
-*/
+
   // Обрабатываем собеседника "peer"
   if (msg.n == 'peer') {
-    analyse(msg)
-    action(msg)
+    anPeer(msg)
+    actPeer(msg)
   }
-//  if (msg.n == 'info') raid(msg) // Обрабатываем собеседника "info"
+/*
+  // Обрабатываем собеседника "info"
+  if (msg.n == 'info') {
+    anInfo(msg)
+    actInfo(msg)
+  }
+
+  // Обрабатываем собеседника "pve"
+  if (msg.n == 'pve') {
+    anInfo(msg)
+    actInfo(msg)
+  }
+*/
 }
