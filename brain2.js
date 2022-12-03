@@ -52,6 +52,10 @@ function main(msg) {
     || msg.m.match('Тебе не уйти от противника')
     || msg.m.match('Во время вылазки на тебя напал')
   ) global.st.angyMob   = true
+  if (
+    msg.m.match('Ты одержал победу!')
+    || msg.m.match('Ты готов снова отправиться в Пустошь!')
+  ) global.st.angyMob   = false
   if (msg.m.match('Ты встретил бродячего торговца,'))
     global.st.goodMob   = true
   global.st.dark        = Boolean(msg.m.match('🚷'))
@@ -69,10 +73,7 @@ function main(msg) {
 
 
 
-  if (
-    msg.m.match('Ты одержал победу!')
-    || msg.m.match('Ты готов снова отправиться в Пустошь!')
-  ) global.st.angyMob   = false
+  
 
   if (msg.m.match('Ты очень голоден.')) {
     send('peer', '/myfood')
