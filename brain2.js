@@ -49,10 +49,7 @@ function main(msg) {
     msg.m.match('Ты не сможешь увильнуть от противника')
     || msg.m.match('Тебе не уйти от противника')
     || msg.m.match('Во время вылазки на тебя напал')
-  ) {
-    send('peer', '⚔️Дать отпор')
-    return
-  }
+  ) global.st.angyMob = true
 
   // Ловим километраж
   let parse
