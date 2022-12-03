@@ -13,7 +13,6 @@ global.st = {
   garbage:   false
 }
 
-// Техническая функция: интуиция говорит: "Оставить!" - хрен знает почему
 module.exports = function(msg) {
   console.log('--------------------')
   console.log(global.st)
