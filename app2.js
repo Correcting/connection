@@ -1,8 +1,9 @@
 // Грузим либы и настройки
 const TgApi  = require('./tg.js')
 const prompt = require('prompt-sync')()
-const Brain  = require('./brain2.js')
 global       = require('./config.js')()
+const Brain  = require('./brain2.js')
+const brain  = new Brain()
 
 //------------------
 // Асинхронная функция запуска
