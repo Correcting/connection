@@ -31,7 +31,7 @@ module.exports = class {
 
   run(msg) {
     console.log('----------------------------------------')
-    console.log(msg)
+    console.log('Сообщение:', msg)
 
     // Обрабатываем собеседника "peer"
     if (msg.n == 'peer') {
