@@ -23,7 +23,7 @@ module.exports = class {
       view:      false, // осмотрелись ли?
       dark:      false, // темная ли зона?
       x:         null,  // какой сейчас километр?
-      angyMob:   false, // есть ли рядом злой моб?
+      angryMob:  false, // есть ли рядом злой моб?
       goodMob:   false, // есть ли рядом добрый моб?
       lowHealth: false, // игра дала понять, что мало здоровья?
       garbage:   false  // что по хламу в рюкзаке?
