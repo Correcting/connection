@@ -30,7 +30,7 @@ module.exports = class {
   }
 
   run(msg) {
-    console.log('--------------------')
+    console.log('----------------------------------------')
     console.log(msg)
 
     // Обрабатываем собеседника "peer"
