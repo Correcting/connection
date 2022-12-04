@@ -18,6 +18,7 @@ module.exports = class {
   constructor() {
     // Дерево состояний (как мы видим мир)
     global.st = {
+      need:      false, // нужно ли действие?
       cite:      null,  // где мы по типу местности?
       view:      false, // осмотрелись ли?
       dark:      false, // темная ли зона?
