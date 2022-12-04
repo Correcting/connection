@@ -38,6 +38,7 @@ module.exports = class {
       anPeer(msg)
       console.log(global.st)
       actPeer(msg)
+      console.log('Исходящие:', global.out)
     }
   /*
     // Обрабатываем собеседника "info"
