@@ -20,12 +20,12 @@ module.exports = class {
     global.st = {
       act:       false, // нужно ли действие?
       cite:      null,  // где мы по типу местности?
-      dark:      false, // темная ли зона?
+      dark:      null,  // темная ли зона?
       x:         null,  // какой сейчас километр?
-      angryMob:  false, // есть ли рядом злой моб?
-      goodMob:   false, // есть ли рядом добрый моб?
-      lowHealth: false, // игра дала понять, что мало здоровья?
-      garbage:   false  // что по хламу в рюкзаке?
+      angryMob:  null,  // есть ли рядом злой моб?
+      goodMob:   null,  // есть ли рядом добрый моб?
+      lowHealth: null,  // игра дала понять, что мало здоровья?
+      garbage:   null   // что по хламу в рюкзаке?
     }
   }
 
