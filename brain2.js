@@ -36,7 +36,7 @@ module.exports = class {
     // Обрабатываем собеседника "peer"
     if (msg.n == 'peer') {
       anPeer(msg)
-      console.log(global.st)
+      console.log('Статусы:', global.st)
       actPeer(msg)
       console.log('Исходящие:', global.out)
     }
