@@ -20,7 +20,6 @@ module.exports = class {
     global.st = {
       act:       false, // нужно ли действие?
       cite:      null,  // где мы по типу местности?
-      view:      false, // осмотрелись ли?
       dark:      false, // темная ли зона?
       x:         null,  // какой сейчас километр?
       angryMob:  false, // есть ли рядом злой моб?
