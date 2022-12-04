@@ -48,7 +48,6 @@ const API = class {
 
   // Отправка сообщения
   send(name, text) {
-    console.log('message: '+text+',\nsec.ids: ', global.sec.ids[name])
     return this.call('messages.sendMessage', {
       message: text,
       peer:    {
