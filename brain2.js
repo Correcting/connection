@@ -38,7 +38,7 @@ module.exports = class {
     if (msg.n == 'peer') {
       anPeer(msg)
       console.log('Статусы:', global.st)
-      actPeer(msg)
+      if (st.act) actPeer(msg)
       console.log('Исходящие:', global.out)
     }
   /*
