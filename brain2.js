@@ -27,6 +27,7 @@ module.exports = class {
       goodMob:   null, // есть ли рядом добрый моб?
       lowHealth: null, // игра дала понять, что мало здоровья?
       garbage:   null  // что по хламу в рюкзаке?
+      health:     null // поясните за хп, ну!?
     }
   }
 
