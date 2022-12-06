@@ -22,6 +22,7 @@ module.exports = class {
       cite:      null, // где мы по типу местности?
       dark:      null, // темная ли зона?
       x:         null, // какой сейчас километр?
+      hangry:    null, // какой уровень голода?
       angryMob:  null, // есть ли рядом злой моб?
       goodMob:   null, // есть ли рядом добрый моб?
       lowHealth: null, // игра дала понять, что мало здоровья?
