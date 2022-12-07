@@ -47,7 +47,7 @@ msg - это объект вида: {
     if (msg.n == 'peer') {
       anPeer(msg)
       console.log('Статусы:', global.st)
-      if (!st.pause) actPeer(msg)
+      if (!global.st.pause) actPeer(msg)
       console.log('Исходящие:', global.out)
     }
   /*
